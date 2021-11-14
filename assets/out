@@ -53,8 +53,8 @@ else
 fi
 
 # set the tag for the new version on the HEAD commit
-git tag "$version"
-git push --tags
+git tag "v${version}" # prefix the actual tag with a v
+git push --tags --force # overwrite the tag if it already exists remotely
 
 jq -n "{
   version: {
