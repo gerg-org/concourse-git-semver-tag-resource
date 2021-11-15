@@ -1,11 +1,10 @@
-FROM alpine:3.11
+FROM alpine:3
 
 RUN apk --update add \
   ca-certificates \
   bash \
   jq \
-  nodejs \
-  nodejs-npm \
+  npm \
   git \
   openssh
 
